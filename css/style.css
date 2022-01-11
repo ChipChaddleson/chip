@@ -1,0 +1,89 @@
+h2{
+    transform-origin: center center;
+    font-size: 5em;
+    font-family: 'Varela Round', sans-serif;
+    color: rgb(191, 223, 191);
+    position: relative;
+    text-shadow: 0 0 30px rgb(88, 138, 55), 0 0 15px rgba(88, 167, 81, 0.575), 0 0 20px rgba(39, 112, 58, 0.267);
+    padding: 0;
+    margin: 0;
+    border:0;
+    width: fit-content;
+    /* stop the user selecting */
+    -webkit-user-select: none;
+
+}
+
+div#container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    height: fit-content;
+    /* put all the text inside in the center */
+    text-align: center;
+
+}
+
+h2:hover{
+    transition: font-size 0.5s cubic-bezier(1, 0.1, 0.44, 1.12);
+    font-size: 6em;
+    color: rgb(33, 163, 54);
+}
+
+h2:active{
+    transition: all 0.5s cubic-bezier(0, 1.57, 0.45, 0.9);
+    transform: rotate(5deg);
+}
+
+
+body{
+    background-color: rgb(15, 15, 15);
+}
+
+p{
+    font-size: 1.5em;
+    font-family: 'Varela Round', sans-serif;
+    color: rgb(191, 223, 191);
+    position: relative;
+    text-shadow: 0 0 30px rgb(88, 138, 55), 0 0 15px rgba(88, 167, 81, 0.575), 0 0 20px rgba(39, 112, 58, 0.267);
+    padding: 0;
+    margin: 0;
+    border:0;
+    width: fit-content;
+    /* stop the user selecting */
+    -webkit-user-select: none;
+
+    /* center it */
+    text-align: center;
+    /* translate: translateX(-50px); */
+
+
+
+}
+
+div#scroller{
+    position: fixed;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    width: fit-content;
+    height: fit-content;
+    /* put all the text inside in the center */
+    text-align: center;
+
+}
+
+div#container2{
+    position: absolute;
+
+    top: 60%;
+    left: -25%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    height: fit-content;
+    /* put all the text inside in the center */
+    text-align: left;
+    visibility: hidden;
+}
