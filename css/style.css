@@ -62,10 +62,39 @@ p{
 
 
 }
+#scroll-icon{
+    position: fixed;
+    color: red;
+    width: fit-content;
+    top: 92%;
+    left: 96%;
+}
+.material-icons{
+    color: rgb(191, 223, 191);
+    position: relative;
+    text-shadow: 0 0 30px rgb(88, 138, 55), 0 0 15px rgba(88, 167, 81, 0.575), 0 0 20px rgba(39, 112, 58, 0.267);
+    padding: 0;
+    margin: 0;
+    border:0;
+    width: fit-content;
+    /* stop the user selecting */
+    -webkit-user-select: none;
+    animation-name: example;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+/* The animation code */
+@keyframes example {
+    0%   {transform: translateY(0px);}
+    50% {transform: translateY(10px);}
+  }
+  
+  /* The element to apply the animation to */
 
 div#scroller{
     position: fixed;
-    top: -30px;
+    top: -40px;
     left: 50%;
     transform: translate(-50%, 0px);
     width: fit-content;

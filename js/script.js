@@ -33,7 +33,7 @@ window.addEventListener('load', function() {
                 console.log(moveed);
         };
 
-        //prevent page fom scrolling
+        //prevent page from scrolling
         return false;
     };
 
