@@ -1,3 +1,16 @@
+
+div#container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    height: fit-content;
+    /* put all the text inside in the center */
+    text-align: center;
+
+}
+
 h2{
     transform-origin: center center;
     font-size: 5em;
@@ -14,28 +27,20 @@ h2{
 
 }
 
-div#container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: fit-content;
-    height: fit-content;
-    /* put all the text inside in the center */
-    text-align: center;
-
-}
-
 h2:hover{
-    transition: font-size 0.5s cubic-bezier(1, 0.1, 0.44, 1.12);
+    transition: 0.3s cubic-bezier(1, 0.1, 0.44, 1.12);
     font-size: 6em;
     color: rgb(33, 163, 54);
+    text-shadow: 0 0 50px rgb(88, 138, 55), 0 0 80px rgba(88, 167, 81, 0.801), 0 0 100px rgba(39, 112, 58, 0.267);
+    
 }
 
 h2:active{
-    transition: all 0.5s cubic-bezier(0, 1.57, 0.45, 0.9);
-    transform: rotate(5deg);
+    transition: all 0.3s cubic-bezier(0, 1.57, 0.45, 0.9);
+    transform: rotate(10deg);
+    font-size: 5.7em;
 }
+
 
 
 body{
@@ -43,6 +48,7 @@ body{
 }
 
 p{
+    
     font-size: 1.5em;
     font-family: 'Varela Round', sans-serif;
     color: rgb(191, 223, 191);
@@ -66,8 +72,9 @@ p{
     position: fixed;
     color: red;
     width: fit-content;
-    top: 92%;
-    left: 96%;
+    transition: 1s;
+    top: 0%;
+    left: 0%;
 }
 .material-icons{
     color: rgb(191, 223, 191);
@@ -93,6 +100,7 @@ p{
   /* The element to apply the animation to */
 
 div#scroller{
+    transition: 0.3s;
     position: fixed;
     top: -40px;
     left: 50%;
@@ -102,6 +110,9 @@ div#scroller{
     /* put all the text inside in the center */
     text-align: center;
 
+}
+#scroller2{
+    transition: 0.3s;
 }
 
 div#container2{
@@ -115,4 +126,13 @@ div#container2{
     /* put all the text inside in the center */
     text-align: left;
     visibility: hidden;
+}
+
+.line{
+    width: 0%;
+    height: 10px;
+    background-color: rgb(191, 223, 191);
+    box-shadow: 0 0 30px rgb(88, 138, 55), 0 0 15px rgba(88, 167, 81, 0.575), 0 0 20px rgba(39, 112, 58, 0.267);
+    position: relative;
+    margin: auto;
 }

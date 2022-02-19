@@ -22,16 +22,32 @@ window.addEventListener('load', function() {
  
     });
     moveed = 0;
+
+
     $('html').addEventListener('mousewheel', function(e){
         if(e.wheelDelta < 0) {
             //scroll down
-            if(moveed < 1920) {
-                console.log('Down');
+            if(moveed < window.innerHeight/2) {
                 moveed = moveed + 30;
-
-                $('#scroller').style.transform = "translate(-50%," + moveed + '%)';
+                console.log('Down');
                 console.log(moveed);
+                console.log(window.innerHeight/2);
+
+                
+                if (moveed < window.innerHeight/2) {
+                    console.log('move');
+                    document.getElementById("scroller2").style.top = moveed*1.2 + "px";
+                    document.getElementById("scroller").style.top = moveed*1.2 - 20 + "px";    
+                    document.getElementById("scroll-icon").style.top = moveed*3 - 20 + "px";    
+                };
+
         };
+            if(moveed > window.innerHeight/2) {
+                console.log('end');
+                document.getElementById("scroller2").style.transition = "all 1s cubic-bezier(1, 0.31, 0.4, 0.93) 0s";
+                document.getElementById("scroller2").style.width = "100%";
+                
+            }
 
         //prevent page from scrolling
         return false;
