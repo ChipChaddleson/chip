@@ -1,4 +1,6 @@
-
+body{
+    overflow: hidden;
+}
 div#container{
     position: absolute;
     top: 50%;
@@ -11,7 +13,7 @@ div#container{
 
 }
 
-h2{
+.chip{
     transform-origin: center center;
     font-size: 5em;
     font-family: 'Varela Round', sans-serif;
@@ -27,7 +29,7 @@ h2{
 
 }
 
-h2:hover{
+.chip:hover{
     transition: 0.3s cubic-bezier(1, 0.1, 0.44, 1.12);
     font-size: 6em;
     color: rgb(33, 163, 54);
@@ -35,7 +37,7 @@ h2:hover{
     
 }
 
-h2:active{
+.chip:active{
     transition: all 0.3s cubic-bezier(0, 1.57, 0.45, 0.9);
     transform: rotate(10deg);
     font-size: 5.7em;
@@ -116,7 +118,7 @@ div#scroller{
 }
 
 div#container2{
-    position: absolute;
+    position: fixed;
 
     top: 60%;
     left: -25%;
@@ -135,4 +137,51 @@ div#container2{
     box-shadow: 0 0 30px rgb(88, 138, 55), 0 0 15px rgba(88, 167, 81, 0.575), 0 0 20px rgba(39, 112, 58, 0.267);
     position: relative;
     margin: auto;
+}
+
+
+#titles{
+    position: fixed;
+    top: -25vh;
+    left: -25vw;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    height: 27vh;
+    /* put all the text inside in the center */
+    text-align: center;
+    overflow: hidden;
+
+
+}
+#titles2{
+    position: fixed;
+    top: 125vh;
+    left: 125vw;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    height: 27vh;
+    /* put all the text inside in the center */
+    text-align: center;
+    overflow: hidden;
+
+
+}
+
+
+.paragraph{
+    font-size: 1.5em;
+    font-family: 'Varela Round', sans-serif;
+    color: rgb(191, 223, 191);
+    position: relative;
+    text-shadow: 0 0 30px rgb(88, 138, 55), 0 0 15px rgba(88, 167, 81, 0.575), 0 0 20px rgba(39, 112, 58, 0.267);
+    padding: 0;
+    margin: 0;
+    border:0;
+    width: fit-content;
+    /* stop the user selecting */
+    -webkit-user-select: none;
+
+    /* center it */
+    text-align: center;
+    /* translate: translateX(-50px); */
 }
