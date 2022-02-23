@@ -40,8 +40,8 @@ window.addEventListener('load', function() {
         // make the paragraph transtalte to the postition 100px down the page
         paragraph.style.left = "50%";
         titleDrop = true;
-        alowNext();
         if (titleDrop2 == true && titleDrop == true) {
+            alowNext();
             dropTitles();
         }
  
@@ -72,8 +72,8 @@ window.addEventListener('load', function() {
                 document.getElementById("scroller2").style.transition = "all 1s cubic-bezier(1, 0.31, 0.4, 0.93) 0s";
                 document.getElementById("scroller2").style.width = "100%";
                 titleDrop2 = true;
-                alowNext();
                 if (titleDrop2 == true && titleDrop == true) {
+                    alowNext();
                     dropTitles();
                 }
                 
@@ -94,21 +94,26 @@ window.addEventListener('load', function() {
         
     }
 
-    function dropPar() {
-        console.log('part 2 !!!!!!!!!');
-        par1.style.transition = 'all 1.5s cubic-bezier(.95,.49,.51,1.23)';
-        par1.style.left = "25vw";
-        par1.style.top = "25vh";
-        par2.style.transition = 'all 1.5s cubic-bezier(.95,.49,.51,1.23)';
-        par2.style.left = "75vw";
-        par2.style.top = "75vh";
-    }
+    
 
 
     var bar = document.getElementById('scroller2');
     let isHover = false;
     // wait for hover
     function alowNext() {
+        function dropPar() {
+            console.log('part 2 !!!!!!!!!');
+            par1.style.transition = 'all 1.5s cubic-bezier(.95,.49,.51,1.23)';
+            par1.style.left = "25vw";
+            par1.style.top = "25vh";
+            par3.style.transition = 'all 1.5s cubic-bezier(.95,.49,.51,1.23)';
+            par3.style.left = "75vw";
+            par3.style.top = "25vh";
+            par2.style.transition = 'all 1.5s cubic-bezier(.95,.49,.51,1.23)';
+            par2.style.left = "75vw";
+            par2.style.top = "75vh";
+        }
+
         $('#scroller2').addEventListener('mouseover', function() {
             console.log('hover');
             bar.style.transition = 'all 0.2s cubic-bezier(.95,.49,.51,1.23)';
@@ -120,11 +125,11 @@ window.addEventListener('load', function() {
                 // check if still hovering 
                 if (isHover) {
                     // if still hovering, reset the background color
-                    bar.style.backgroundColor = '#00bcd4';
+                    bar.style.backgroundColor = 'rgb(20 94 100)';
                     console.log('hovering');
                     expandPage();
                 }
-            }, 2000);
+            }, 500);
 
             console.log('ran out');
         });
@@ -135,25 +140,26 @@ window.addEventListener('load', function() {
             bar.style.backgroundColor = '#00bcd4';
             isHover = false;
         });
+        function expandPage() {
+            body = document.getElementById('body');
+            body.style.transition = 'all 1s cubic-bezier(.7,.51,1,.08)';
+            body.style.backgroundColor = '#247682';
+            paragraph.style.transition = 'all 1s cubic-bezier(.7,.51,1,.08)';
+            title.style.transition = 'all 1s cubic-bezier(.7,.51,1,.08)';
+            title2.style.transition = 'all 1s cubic-bezier(.7,.51,1,.08)';
+            document.getElementById('scroller').style.transition = 'all 1s cubic-bezier(.7,.51,1,.08)';
+            document.getElementById('scroll-icon').style.transition = 'all 1s cubic-bezier(.7,.51,1,.08)';
+            bar.style.transition = 'all 1s cubic-bezier(.7,.51,1,.08)';
+            document.getElementById('scroller').style.visibility = 'hidden';
+            document.getElementById('scroll-icon').style.visibility = 'hidden';
+            title.style.visibility = 'hidden';
+            title2.style.visibility = 'hidden';
+            paragraph.style.visibility = 'hidden';
+            bar.style.visibility = 'hidden';
+            dropPar();
+        }
     }
 
-    function expandPage() {
-        body = document.getElementById('body');
-        body.style.transition = 'all 1s cubic-bezier(.7,.51,1,.08)';
-        body.style.backgroundColor = '#247682';
-        paragraph.style.transition = 'all 1s cubic-bezier(.7,.51,1,.08)';
-        title.style.transition = 'all 1s cubic-bezier(.7,.51,1,.08)';
-        title2.style.transition = 'all 1s cubic-bezier(.7,.51,1,.08)';
-        document.getElementById('scroller').style.transition = 'all 1s cubic-bezier(.7,.51,1,.08)';
-        document.getElementById('scroll-icon').style.transition = 'all 1s cubic-bezier(.7,.51,1,.08)';
-        bar.style.transition = 'all 1s cubic-bezier(.7,.51,1,.08)';
-        document.getElementById('scroller').style.visibility = 'hidden';
-        document.getElementById('scroll-icon').style.visibility = 'hidden';
-        title.style.visibility = 'hidden';
-        title2.style.visibility = 'hidden';
-        paragraph.style.visibility = 'hidden';
-        bar.style.visibility = 'hidden';
-        dropPar();
-    }
+    
 
 });

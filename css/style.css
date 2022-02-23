@@ -172,8 +172,7 @@ div#container2{
     top: 125vh;
     left: -25vw;
     transform: translate(-50%, -50%);
-    width: 40vw;
-    height: 27vh;
+
     /* put all the text inside in the center */
     text-align: center;
     overflow: hidden;
@@ -187,6 +186,19 @@ div#container2{
     transform: translate(-50%, -50%);
     width: 40vw;
     height: 27vh;
+    /* put all the text inside in the center */
+    text-align: center;
+    overflow: hidden;
+
+
+}
+#par3{
+    position: fixed;
+    top: 125vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    width: 10vw;
+    height: 35vh;
     /* put all the text inside in the center */
     text-align: center;
     overflow: hidden;
@@ -218,11 +230,10 @@ div#container2{
     font-family: 'Varela Round', sans-serif;
     color: rgb(191, 219, 223);
     position: relative;
-    text-shadow: 0 0 30px rgb(88, 138, 55), 0 0 15px rgba(88, 167, 81, 0.575), 0 0 20px rgba(39, 112, 58, 0.267);
-    padding: 0;
-    margin: 0;
+    text-shadow: 0 0 30px rgb(142, 208, 218), 0 0 15px rgba(130, 194, 204, 0.842), 0 0 20px rgba(89, 122, 128, 0.267);
+    padding: 5px;
+    margin: 0.5em;
     border:0;
-    width: fit-content;
     /* stop the user selecting */
     -webkit-user-select: none;
 
