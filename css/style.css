@@ -1,5 +1,5 @@
 body{
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 div#container{
     position: absolute;
@@ -111,7 +111,7 @@ div#scroller{
     height: fit-content;
     /* put all the text inside in the center */
     text-align: center;
-
+    height: 25px;
 }
 #scroller2{
     transition: 0.3s;
@@ -167,11 +167,56 @@ div#container2{
 
 }
 
+#par1{
+    position: fixed;
+    top: 125vh;
+    left: -25vw;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    height: 27vh;
+    /* put all the text inside in the center */
+    text-align: center;
+    overflow: hidden;
+
+
+}
+#par2{
+    position: fixed;
+    top: -25vh;
+    left: 125vw;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    height: 27vh;
+    /* put all the text inside in the center */
+    text-align: center;
+    overflow: hidden;
+
+
+}
+
 
 .paragraph{
     font-size: 1.5em;
     font-family: 'Varela Round', sans-serif;
     color: rgb(191, 223, 191);
+    position: relative;
+    text-shadow: 0 0 30px rgb(88, 138, 55), 0 0 15px rgba(88, 167, 81, 0.575), 0 0 20px rgba(39, 112, 58, 0.267);
+    padding: 0;
+    margin: 0;
+    border:0;
+    width: fit-content;
+    /* stop the user selecting */
+    -webkit-user-select: none;
+
+    /* center it */
+    text-align: center;
+    /* translate: translateX(-50px); */
+}
+
+.paragraph2{
+    font-size: 1.5em;
+    font-family: 'Varela Round', sans-serif;
+    color: rgb(191, 219, 223);
     position: relative;
     text-shadow: 0 0 30px rgb(88, 138, 55), 0 0 15px rgba(88, 167, 81, 0.575), 0 0 20px rgba(39, 112, 58, 0.267);
     padding: 0;
